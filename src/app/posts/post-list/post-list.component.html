@@ -4,5 +4,6 @@
       {{post.title}}
     </mat-expansion-panel-header>
       <p>{{post.content}}</p>
+      <a mat-button color="primary" [routerLink] = "['/edit',post.id]">EDIT</a>
   </mat-expansion-panel>
 </mat-accordion>

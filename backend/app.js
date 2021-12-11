@@ -4,6 +4,7 @@ const app = express();
 app.use(express.urlencoded({extended: true}));
 app.use(express.json())
 
+const postroutes = require('./routes/post');
 const url = 'mongodb://127.0.0.1:27017/post_database'
 
 mongoose.connect(url, { useNewUrlParser: true })
@@ -25,7 +26,7 @@ app.use((req, res, next)=>{
   next();
 });
 
-const postroutes = require('./routes/post');
+
 app.use("/api/posts", postroutes);
 
 module.exports = app;

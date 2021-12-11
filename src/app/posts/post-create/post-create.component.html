@@ -1,7 +1,7 @@
 <mat-card>
   <form #postForm = "ngForm" (ngSubmit) = "onAddPost(postForm)"  >
-      <input   type = "text" name = "title" ngModel>
-      <textarea  rows = "2" name = "content" ngModel> </textarea>
+      <input   type = "text" name = "title" [ngModel] = "post.title" >
+      <textarea  rows = "2" name = "content" [ngModel] = "post.content" > </textarea>
       <button  color="primary" type="submit">Save Post</button>
   </form>
 </mat-card>
