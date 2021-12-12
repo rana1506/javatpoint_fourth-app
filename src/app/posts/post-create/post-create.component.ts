@@ -11,7 +11,7 @@ import { PostService} from '../../services/post.service';
 })
 export class PostCreateComponent implements OnInit {
 
-  posts : Post[] = [];
+  //posts : Post[] = [];
   post: any;
 
   constructor(public postService: PostService, public route:ActivatedRoute) {
